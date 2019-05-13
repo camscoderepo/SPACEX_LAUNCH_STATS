@@ -4,6 +4,7 @@ import { ApolloProvider } from 'react-apollo';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Launches from './components/Launches';
 import Launch from './components/Launch';
+import Pager from './components/Pager';
 import './App.css';
 import logo from './SpaceX_9801.png';
 
@@ -16,6 +17,7 @@ class App extends Component {
   render() {
     return (
       <ApolloProvider client={client}>
+      
       <Router>
         <div className="container">
           <img
@@ -23,10 +25,13 @@ class App extends Component {
             alt="SpaceX"
             style={{ width: 300, display: 'block', margin: 'auto' }}
           />
+          
           <Route exact path="/" component={Launches} />
           <Route exact path="/launch/:flight_number" component={Launch} />
+          <Pager> </Pager>
         </div>
       </Router>
+      
     </ApolloProvider>
     );
   }

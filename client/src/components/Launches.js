@@ -3,7 +3,6 @@ import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import LaunchItem from './LaunchItem';
 import MissionKey from './MissionKey';
-
 const LAUNCHES_QUERY = gql`
   query LaunchesQuery {
     launches {
