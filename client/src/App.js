@@ -17,7 +17,6 @@ class App extends Component {
   render() {
     return (
       <ApolloProvider client={client}>
-      
       <Router>
         <div className="container">
           <img
@@ -25,7 +24,6 @@ class App extends Component {
             alt="SpaceX"
             style={{ width: 300, display: 'block', margin: 'auto' }}
           />
-          
           <Route exact path="/" component={Launches} />
           <Route exact path="/launch/:flight_number" component={Launch} />
           <Pager> </Pager>
